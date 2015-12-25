@@ -39,7 +39,8 @@
 #define MAX_RANGE 255
 #define FLOAT_ZERO_ERROR 10
 
-#define PI 3.14159265
+// no need to define PI
+// #define PI 3.14159265
 
 // motor angles in degrees
 #ifdef TRI_CONFIG
@@ -118,7 +119,7 @@ public:
 	}	
 	int moveCartesian(int v_x, int v_y, int psi);
 	int moveCartesian(int v_x, int v_y){
-		moveCartesian(v_x, v_y, 0);
+		return moveCartesian(v_x, v_y, 0);
 	}
 	void moveAccel(int alpha, int v, int psi){
 		// v is in this case the target velocity
